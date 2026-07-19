@@ -1,0 +1,1344 @@
+<html lang="ko"><head><script data-bard-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImVkZDkxY2E4MGNmMDdmYzZiNWE4ZDllN2E2MTk4NWVlNTk3MDVmNTciLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxMTQ5MTkwMTI3MTMzNTgwNTIxOSIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzRkMTQxZWRmYjlmMDdiZTJfaW5kZXguaHRtbC03NzQifSwiZXhwIjoxNzg0NDQ2NTgxLCJpYXQiOjE3ODQ0NDI5ODEsImFsZyI6IlJTMjU2In0.IeaO0WKONcg_VxyX30_9I7EUBWNKoBI1_JjwSSHFnPTmjv7UxAct8Oz8qniZhjj_wUVFvVQ8PNbpupY6PfnPqHsOHXOkSd7Qc-6vNttdIfkKlSyHE_GWGXQ3kBnlp1vNIiyefq-f5JSuILN6o9gC4TNkzqGrEGvvgR5TCc89670LEhRCnivv89zWg80IONsjtU1l5j6aydn_cIlF1XprO9rvQSEadhzn-6004e6IONEPviT220GfznXFoXQnF7ctXJvWZgZmxYvvQeMZAK2XDlMK7Xgcqrhs0dxBLG_DqH_6o51ODfYN1h2Qv-8-ZzoKHYmFQ3X-RyqyCOtDG_hxdg","c_4d141edfb9f07be2_index.html-774")</script><script data-bard-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
+</script><script data-bard-injected="true">(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script data-bard-injected="true">(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script data-bard-injected="true">
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script data-bard-injected="true">((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script data-bard-injected="true">(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚨 PANIC LINE - 기한 임박 일정 강제 완료 알람기</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&amp;family=Pretendard:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                        mono: ['Orbitron', 'monospace'],
+                    },
+                    colors: {
+                        panic: {
+                            50: '#faf5ff',
+                            100: '#f3e8ff',
+                            200: '#e9d5ff',
+                            300: '#d8b4fe',
+                            400: '#c084fc',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce',
+                            800: '#6b21a8',
+                            900: '#581c87',
+                            alert: '#ef4444',
+                        }
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'siren': 'siren 0.5s ease-in-out infinite alternate',
+                        'progress-glow': 'glow 2s infinite alternate',
+                    },
+                    keyframes: {
+                        siren: {
+                            '0%': { backgroundColor: 'rgba(239, 68, 68, 0.1)' },
+                            '100%': { backgroundColor: 'rgba(239, 68, 68, 0.4)' },
+                        },
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(168, 85, 247, 0.5)' },
+                            '100%': { boxShadow: '0 0 20px rgba(168, 85, 247, 0.9)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0d0c12;
+            color: #f3f4f6;
+            background-image: radial-gradient(circle at 50% 50%, #1e1135 0%, #0d0c12 100%);
+            background-attachment: fixed;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #171520;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #6b21a8;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #a855f7;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Pretendard, sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:Orbitron, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.right-3{right:0.75rem}.top-0{top:0px}.top-3\.5{top:0.875rem}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-16{height:4rem}.h-24{height:6rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-full{height:100%}.max-h-\[300px\]{max-height:300px}.max-h-\[550px\]{max-height:550px}.min-h-\[500px\]{min-height:500px}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-16{width:4rem}.w-24{width:6rem}.w-36{width:9rem}.w-4{width:1rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-grow{flex-grow:1}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes bounce{0%, 100%{transform:translateY(-25%);animation-timing-function:cubic-bezier(0.8,0,1,1)}50%{transform:none;animation-timing-function:cubic-bezier(0,0,0.2,1)}}.animate-bounce{animation:bounce 1s infinite}@keyframes glow{0%{box-shadow:0 0 5px rgba(168, 85, 247, 0.5)}100%{box-shadow:0 0 20px rgba(168, 85, 247, 0.9)}}.animate-progress-glow{animation:glow 2s infinite alternate}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}@keyframes pulse{50%{opacity:.5}}.animate-pulse-fast{animation:pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite}@keyframes siren{0%{background-color:rgba(239, 68, 68, 0.1)}100%{background-color:rgba(239, 68, 68, 0.4)}}.animate-siren{animation:siren 0.5s ease-in-out infinite alternate}@keyframes spin{to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-end{align-items:flex-end}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.self-start{align-self:flex-start}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.overflow-x-hidden{overflow-x:hidden}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-2{border-width:2px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-amber-500\/30{border-color:rgb(245 158 11 / 0.3)}.border-purple-500\/30{border-color:rgb(168 85 247 / 0.3)}.border-purple-900{--tw-border-opacity:1;border-color:rgb(88 28 135 / var(--tw-border-opacity, 1))}.border-purple-900\/20{border-color:rgb(88 28 135 / 0.2)}.border-purple-900\/30{border-color:rgb(88 28 135 / 0.3)}.border-purple-900\/40{border-color:rgb(88 28 135 / 0.4)}.border-purple-900\/60{border-color:rgb(88 28 135 / 0.6)}.border-purple-950{--tw-border-opacity:1;border-color:rgb(59 7 100 / var(--tw-border-opacity, 1))}.border-purple-950\/60{border-color:rgb(59 7 100 / 0.6)}.border-red-500\/40{border-color:rgb(239 68 68 / 0.4)}.border-red-500\/50{border-color:rgb(239 68 68 / 0.5)}.border-red-900\/30{border-color:rgb(127 29 29 / 0.3)}.border-red-900\/40{border-color:rgb(127 29 29 / 0.4)}.border-r-purple-500{--tw-border-opacity:1;border-right-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.border-t-red-500{--tw-border-opacity:1;border-top-color:rgb(239 68 68 / var(--tw-border-opacity, 1))}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-black\/40{background-color:rgb(0 0 0 / 0.4)}.bg-black\/50{background-color:rgb(0 0 0 / 0.5)}.bg-black\/60{background-color:rgb(0 0 0 / 0.6)}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-black\/90{background-color:rgb(0 0 0 / 0.9)}.bg-panic-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}.bg-purple-950{--tw-bg-opacity:1;background-color:rgb(59 7 100 / var(--tw-bg-opacity, 1))}.bg-purple-950\/10{background-color:rgb(59 7 100 / 0.1)}.bg-purple-950\/20{background-color:rgb(59 7 100 / 0.2)}.bg-purple-950\/60{background-color:rgb(59 7 100 / 0.6)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-red-600\/20{background-color:rgb(220 38 38 / 0.2)}.bg-red-950{--tw-bg-opacity:1;background-color:rgb(69 10 10 / var(--tw-bg-opacity, 1))}.bg-red-950\/20{background-color:rgb(69 10 10 / 0.2)}.bg-red-950\/50{background-color:rgb(69 10 10 / 0.5)}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-amber-950\/40{--tw-gradient-from:rgb(69 26 3 / 0.4) var(--tw-gradient-from-position);--tw-gradient-to:rgb(69 26 3 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-600{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:rgb(147 51 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.from-purple-700{--tw-gradient-from:#7e22ce var(--tw-gradient-from-position);--tw-gradient-to:rgb(126 34 206 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-pink-600{--tw-gradient-to:rgb(219 39 119 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #db2777 var(--tw-gradient-via-position), var(--tw-gradient-to)}.via-purple-700{--tw-gradient-to:rgb(126 34 206 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #7e22ce var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-indigo-700{--tw-gradient-to:#4338ca var(--tw-gradient-to-position)}.to-pink-600{--tw-gradient-to:#db2777 var(--tw-gradient-to-position)}.to-purple-950\/40{--tw-gradient-to:rgb(59 7 100 / 0.4) var(--tw-gradient-to-position)}.to-red-500{--tw-gradient-to:#ef4444 var(--tw-gradient-to-position)}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-3{padding-bottom:0.75rem}.pr-1{padding-right:0.25rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.font-mono{font-family:Orbitron, monospace}.font-sans{font-family:Pretendard, sans-serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-300{--tw-text-opacity:1;color:rgb(252 211 77 / var(--tw-text-opacity, 1))}.text-gray-300{--tw-text-opacity:1;color:rgb(209 213 219 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-pink-500{--tw-text-opacity:1;color:rgb(236 72 153 / var(--tw-text-opacity, 1))}.text-purple-200{--tw-text-opacity:1;color:rgb(233 213 255 / var(--tw-text-opacity, 1))}.text-purple-300{--tw-text-opacity:1;color:rgb(216 180 254 / var(--tw-text-opacity, 1))}.text-purple-500{--tw-text-opacity:1;color:rgb(168 85 247 / var(--tw-text-opacity, 1))}.text-purple-600{--tw-text-opacity:1;color:rgb(147 51 234 / var(--tw-text-opacity, 1))}.text-purple-900{--tw-text-opacity:1;color:rgb(88 28 135 / var(--tw-text-opacity, 1))}.text-purple-950{--tw-text-opacity:1;color:rgb(59 7 100 / var(--tw-text-opacity, 1))}.text-red-200{--tw-text-opacity:1;color:rgb(254 202 202 / var(--tw-text-opacity, 1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.placeholder-purple-300\/40::placeholder{color:rgb(216 180 254 / 0.4)}.shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-purple-900\/30{--tw-shadow-color:rgb(88 28 135 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.shadow-purple-900\/50{--tw-shadow-color:rgb(88 28 135 / 0.5);--tw-shadow:var(--tw-shadow-colored)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-1000{transition-duration:1000ms}.duration-300{transition-duration:300ms}.hover\:bg-purple-900:hover{--tw-bg-opacity:1;background-color:rgb(88 28 135 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-950\/40:hover{background-color:rgb(59 7 100 / 0.4)}.hover\:bg-red-500:hover{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.hover\:from-purple-500:hover{--tw-gradient-from:#a855f7 var(--tw-gradient-from-position);--tw-gradient-to:rgb(168 85 247 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:from-purple-600:hover{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:rgb(147 51 234 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.hover\:to-indigo-600:hover{--tw-gradient-to:#4f46e5 var(--tw-gradient-to-position)}.hover\:to-pink-500:hover{--tw-gradient-to:#ec4899 var(--tw-gradient-to-position)}.hover\:shadow-purple-500\/30:hover{--tw-shadow-color:rgb(168 85 247 / 0.3);--tw-shadow:var(--tw-shadow-colored)}.focus\:border-panic-500:focus{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.focus\:border-purple-500:focus{--tw-border-opacity:1;border-color:rgb(168 85 247 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-purple-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(168 85 247 / var(--tw-ring-opacity, 1))}.focus\:ring-offset-black:focus{--tw-ring-offset-color:#000}.active\:scale-95:active{--tw-scale-x:.95;--tw-scale-y:.95;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-center{align-items:center}.sm\:self-center{align-self:center}}@media (min-width: 768px){.md\:flex-row{flex-direction:row}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:col-span-3{grid-column:span 3 / span 3}.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}}</style></head>
+<body class="min-h-screen flex flex-col font-sans overflow-x-hidden antialiased">
+
+    <header class="border-b border-purple-900/40 bg-black/40 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl animate-bounce">🚨</span>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                        PANIC LINE <span class="text-xs bg-panic-600 px-2 py-0.5 rounded-full font-mono text-purple-200 uppercase tracking-widest animate-pulse">Urgently Active</span>
+                    </h1>
+                    <p class="text-[10px] text-purple-300">미루기 금지! 최종 기한 보장용 스케줄러 &amp; 강제 비상벨</p>
+                </div>
+            </div>
+            <!-- Export to Vercel Actions -->
+            <div class="flex items-center space-x-2">
+                <button onclick="downloadProjectZip()" class="flex items-center gap-2 bg-gradient-to-r from-purple-700 to-indigo-700 hover:from-purple-600 hover:to-indigo-600 text-white font-bold text-xs py-2 px-4 rounded-lg shadow-lg shadow-purple-900/30 border border-purple-500/30 transition-all transform active:scale-95">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Vercel용 전체 프로젝트 ZIP 받기
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto p-4 flex flex-col gap-6">
+        
+        <div class="bg-gradient-to-r from-amber-950/40 to-purple-950/40 border border-amber-500/30 rounded-xl p-4 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-md">
+            <div class="flex items-start gap-3">
+                <span class="text-xl">💡</span>
+                <div>
+                    <p class="font-bold text-amber-300">Vercel 배포 및 API 키 설정 안내</p>
+                    <p class="text-gray-300 mt-0.5">다운로드 받으신 ZIP 파일을 풀고 Vercel에 올리실 때는 환경변수 <code class="bg-black/50 text-purple-300 px-1 py-0.5 rounded font-mono font-bold">GEMINI_API_KEY</code>를 꼭 등록해주세요!</p>
+                    <p class="text-gray-400 mt-1">💡 <strong class="text-purple-300">미리보기 모드 가이드:</strong> 로컬 API 키를 넣거나, 입력 없이 "테스트 스케줄러"로 인공지능 시뮬레이션을 즉시 시험해볼 수 있습니다.</p>
+                </div>
+            </div>
+            <!-- API Key input for Live preview testing in sandbox -->
+            <div class="flex items-center gap-2 self-start sm:self-center">
+                <span class="text-[10px] text-gray-400 whitespace-nowrap">테스트 API 키:</span>
+                <input type="password" id="previewApiKey" placeholder="AI 실동작 키 (선택)" class="bg-black/80 border border-purple-900/60 rounded px-2 py-1 text-xs text-purple-300 focus:outline-none focus:border-purple-500 w-36">
+            </div>
+        </div>
+
+        <section class="bg-purple-950/20 border border-purple-900/40 rounded-2xl p-6 backdrop-blur-sm shadow-xl">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end">
+                <div class="lg:col-span-5 space-y-2">
+                    <label class="block text-sm font-semibold text-purple-200">🚨 당장 끝내야 하는 작업 이름</label>
+                    <div class="relative">
+                        <input type="text" id="taskInput" placeholder="예: 데이터 분석 기말 과제서 작성, 발표 대본 연습" class="w-full bg-black/60 border-2 border-purple-900/60 rounded-xl px-4 py-3 text-white placeholder-purple-300/40 focus:outline-none focus:border-panic-500 transition-colors shadow-inner text-sm">
+                        <span class="absolute right-3 top-3.5 text-xs text-purple-500 font-mono">TASK</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-3 space-y-2">
+                    <label class="block text-sm font-semibold text-purple-200">📅 최종 마감 시각 (DEADLINE)</label>
+                    <input type="datetime-local" id="deadlineInput" class="w-full bg-black/60 border-2 border-purple-900/60 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-panic-500 transition-colors shadow-inner text-sm font-mono">
+                </div>
+                <div class="lg:col-span-2 space-y-2">
+                    <label class="block text-sm font-semibold text-purple-200">🔥 조급도 설정</label>
+                    <select id="panicLevel" class="w-full bg-black/60 border-2 border-purple-900/60 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-panic-500 transition-colors shadow-inner text-sm">
+                        <option value="high">🚨 고위험 (상대적으로 고강도)</option>
+                        <option value="critical" selected="">💀 최대 극한 (숨쉴틈 없는 타임라인)</option>
+                        <option value="medium">⏱️ 경고 수준 (표준 밀착 체크)</option>
+                    </select>
+                </div>
+                <div class="lg:col-span-2">
+                    <button onclick="generateUrgentSchedule()" class="w-full bg-gradient-to-r from-purple-600 via-purple-700 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-black text-sm py-3.5 px-4 rounded-xl shadow-lg shadow-purple-900/50 hover:shadow-purple-500/30 transition-all duration-300 flex items-center justify-center gap-2 transform active:scale-95 group">
+                        <span>AI 긴급 분할</span>
+                        <span class="animate-pulse group-hover:translate-x-1 transition-transform">⚡</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="panicStatusBar" class="hidden bg-red-950/20 border border-red-900/30 rounded-2xl p-5 flex flex-col md:flex-row items-center justify-between gap-4 animate-siren">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-red-600/20 flex items-center justify-center animate-pulse-fast border border-red-500/40">
+                    <span class="text-2xl text-red-500">⏱️</span>
+                </div>
+                <div>
+                    <h3 class="text-sm font-black tracking-wider text-red-400">DEADLINE COUNTDOWN</h3>
+                    <p id="tickingClock" class="text-2xl md:text-3xl font-mono font-extrabold text-red-500 tracking-wider">00:00:00:00</p>
+                </div>
+            </div>
+            
+            <div class="flex-grow max-w-lg w-full px-4">
+                <div class="flex justify-between text-[11px] font-mono text-red-400 font-bold mb-1">
+                    <span>작업 돌입 시점</span>
+                    <span id="progressBarPercentage">0%</span>
+                    <span>마감 종료</span>
+                </div>
+                <div class="w-full bg-black/60 rounded-full h-3 overflow-hidden border border-red-900/40">
+                    <div id="progressBar" class="bg-gradient-to-r from-purple-600 via-pink-600 to-red-500 h-full transition-all duration-1000 animate-progress-glow" style="width: 0%;"></div>
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <button onclick="testAlarmSound()" class="bg-purple-950/60 hover:bg-purple-900 border border-purple-500/30 text-purple-200 px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1.5 transition-colors">
+                    <span>🔊 알람 테스트</span>
+                </button>
+                <button onclick="stopSiren()" id="sirenStopBtn" class="hidden bg-red-600 hover:bg-red-500 text-white px-3 py-1.5 rounded-lg text-xs font-black animate-bounce flex items-center gap-1.5 transition-colors">
+                    <span>🔇 사이렌 끄기</span>
+                </button>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            
+            <!-- LEFT COLUMN: Timetable Scheduler -->
+            <div class="lg:col-span-5 bg-black/40 border border-purple-900/30 rounded-2xl p-5 flex flex-col min-h-[500px]">
+                <div class="flex items-center justify-between border-b border-purple-950 pb-3 mb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg">📅</span>
+                        <h2 class="text-base font-bold text-purple-200">초밀착 긴급 타임테이블</h2>
+                    </div>
+                    <span class="text-[10px] font-mono bg-purple-950 text-purple-300 border border-purple-900/40 px-2 py-1 rounded-md">시간 맞춰 벨 작동</span>
+                </div>
+
+                <!-- Custom alert container inside table -->
+                <div id="alarmAlertNotice" class="hidden bg-red-950/50 border border-red-500/50 text-red-200 rounded-xl p-3 mb-4 text-xs flex items-center justify-between animate-pulse">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg">🚨</span>
+                        <div>
+                            <p class="font-extrabold text-red-400">현재 일정 강제 가동 중!</p>
+                            <p id="alertNoticeText" class="text-gray-300">할 일을 바로 수행하십시오.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="timelineContainer" class="flex-grow overflow-y-auto space-y-4 pr-1 custom-scrollbar max-h-[550px]">
+                    <!-- Placeholder visual representation of empty state -->
+                    <div class="h-full flex flex-col items-center justify-center text-center text-gray-500 py-12 px-6">
+                        <svg class="w-16 h-16 text-purple-950 mb-4 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V12m0 0v6m0-6h6m-6 0H6"></path></svg>
+                        <p class="font-bold text-purple-900 text-sm">대기 중인 일정이 존재하지 않습니다.</p>
+                        <p class="text-xs text-gray-600 mt-1">상단에 미루고 있는 일정을 집어넣고 시간을 긴박하게 배정하세요.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT COLUMN: AI Explanation & Distraction Checklists -->
+            <div class="lg:col-span-7 bg-black/40 border border-purple-900/30 rounded-2xl p-5 flex flex-col min-h-[500px]">
+                <div class="flex items-center justify-between border-b border-purple-950 pb-3 mb-4">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg">📢</span>
+                        <h2 class="text-base font-bold text-purple-200">악마의 생산성 어드바이스</h2>
+                    </div>
+                    <span class="text-[10px] bg-red-950 text-red-400 font-mono border border-red-900/30 px-2 py-1 rounded-md">위험 인지 상태</span>
+                </div>
+
+                <div class="flex-grow flex flex-col justify-between space-y-4">
+                    <!-- Text instruction display -->
+                    <div id="explanationContainer" class="bg-purple-950/10 border border-purple-950 rounded-xl p-4 text-sm leading-relaxed text-gray-300 custom-scrollbar overflow-y-auto max-h-[300px]">
+                        <p class="text-gray-500 italic text-center py-12">
+                            "인간아, 마감은 너의 뇌를 한계까지 쥐어짜줄 것이다. 즉시 긴급 포메이션을 기안해라." <br>
+                            <span class="text-xs text-purple-900 mt-2 block font-normal">- PANIC LINE 엔진 -</span>
+                        </p>
+                    </div>
+
+                    <!-- Interactive Distraction Checklist to enforce focus -->
+                    <div class="border-t border-purple-950/60 pt-4 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <h4 class="text-xs font-bold text-purple-300">📱 초집중 환경 강제 이행 서약서</h4>
+                            <span id="checklistProgress" class="text-[10px] font-mono text-pink-500">0/4 수행</span>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                            <label class="flex items-center gap-3 bg-purple-950/20 hover:bg-purple-950/40 border border-purple-900/20 p-2.5 rounded-lg cursor-pointer transition-colors">
+                                <input type="checkbox" onchange="updateChecklist()" class="rounded border-purple-900 text-purple-600 focus:ring-purple-500 focus:ring-offset-black bg-black h-4 w-4">
+                                <span class="text-gray-300">스마트폰 뒤집어서 무음 처리</span>
+                            </label>
+                            <label class="flex items-center gap-3 bg-purple-950/20 hover:bg-purple-950/40 border border-purple-900/20 p-2.5 rounded-lg cursor-pointer transition-colors">
+                                <input type="checkbox" onchange="updateChecklist()" class="rounded border-purple-900 text-purple-600 focus:ring-purple-500 focus:ring-offset-black bg-black h-4 w-4">
+                                <span class="text-gray-300">유튜브/SNS 브라우저 탭 다 끄기</span>
+                            </label>
+                            <label class="flex items-center gap-3 bg-purple-950/20 hover:bg-purple-950/40 border border-purple-900/20 p-2.5 rounded-lg cursor-pointer transition-colors">
+                                <input type="checkbox" onchange="updateChecklist()" class="rounded border-purple-900 text-purple-600 focus:ring-purple-500 focus:ring-offset-black bg-black h-4 w-4">
+                                <span class="text-gray-300">물 한잔 챙겨서 자리에 고정하기</span>
+                            </label>
+                            <label class="flex items-center gap-3 bg-purple-950/20 hover:bg-purple-950/40 border border-purple-900/20 p-2.5 rounded-lg cursor-pointer transition-colors">
+                                <input type="checkbox" onchange="updateChecklist()" class="rounded border-purple-900 text-purple-600 focus:ring-purple-500 focus:ring-offset-black bg-black h-4 w-4">
+                                <span class="text-gray-300">일단 5분간 미친척 한 자라도 적기</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="fullScreenLoader" class="hidden fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex flex-col items-center justify-center p-6 text-center">
+        <div class="relative w-24 h-24 mb-6">
+            <div class="absolute inset-0 rounded-full border-4 border-purple-950"></div>
+            <div class="absolute inset-0 rounded-full border-4 border-t-red-500 border-r-purple-500 animate-spin"></div>
+            <div class="absolute inset-0 flex items-center justify-center text-3xl">⚠️</div>
+        </div>
+        <h2 class="text-xl font-black text-red-500 tracking-wider animate-pulse mb-2">시간이 말라가고 있습니다!</h2>
+        <p class="text-sm text-gray-400 max-w-md">Gemini AI가 당신의 기한에 맞춘 초정밀 악마의 지옥 스케줄을 짜는 중입니다... 창을 끄지 마십시오!</p>
+    </div>
+
+    <footer class="border-t border-purple-950 mt-8 py-6 text-center text-xs text-gray-500">
+        <p>© 2026 PANIC LINE Team. Powered by Google Gemini. Vercel Serverless Ready.</p>
+    </footer>
+
+    <script>
+        // Global State variables
+        let alarmTimeoutTracker = [];
+        let deadlineTimerInterval = null;
+        let alarmAudioContext = null;
+        let isSirenPlaying = false;
+        let sirenOscillators = [];
+        let scheduledTimetable = [];
+
+        // Audio System: Synthesizing sirens on-the-fly to guarantee audio triggers without network fail
+        function initAudioContext() {
+            if (!alarmAudioContext) {
+                alarmAudioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            if (alarmAudioContext.state === 'suspended') {
+                alarmAudioContext.resume();
+            }
+        }
+
+        // Test Sound synthesized as retro alarming sirens
+        function testAlarmSound() {
+            initAudioContext();
+            playUrgentSiren();
+            setTimeout(() => {
+                stopSiren();
+            }, 3000);
+        }
+
+        function playUrgentSiren() {
+            initAudioContext();
+            if (isSirenPlaying) return;
+            
+            isSirenPlaying = true;
+            document.getElementById('sirenStopBtn').classList.remove('hidden');
+
+            const osc1 = alarmAudioContext.createOscillator();
+            const osc2 = alarmAudioContext.createOscillator();
+            const gainNode = alarmAudioContext.createGain();
+
+            osc1.type = 'sawtooth';
+            osc2.type = 'sine';
+
+            osc1.frequency.setValueAtTime(440, alarmAudioContext.currentTime);
+            osc2.frequency.setValueAtTime(220, alarmAudioContext.currentTime);
+
+            // Create LFO-like modulation for a terrifying hazard siren
+            const mod = alarmAudioContext.createOscillator();
+            const modGain = alarmAudioContext.createGain();
+            mod.type = 'sine';
+            mod.frequency.setValueAtTime(6, alarmAudioContext.currentTime); // Speed of siren oscillation
+            modGain.gain.setValueAtTime(150, alarmAudioContext.currentTime); // Range of siren pitch sweep
+
+            mod.connect(modGain);
+            modGain.connect(osc1.frequency);
+            modGain.connect(osc2.frequency);
+
+            osc1.connect(gainNode);
+            osc2.connect(gainNode);
+            gainNode.connect(alarmAudioContext.destination);
+
+            gainNode.gain.setValueAtTime(0.15, alarmAudioContext.currentTime);
+
+            mod.start();
+            osc1.start();
+            osc2.start();
+
+            sirenOscillators = [osc1, osc2, mod];
+        }
+
+        function stopSiren() {
+            sirenOscillators.forEach(osc => {
+                try { osc.stop(); } catch(e) {}
+            });
+            sirenOscillators = [];
+            isSirenPlaying = false;
+            document.getElementById('sirenStopBtn').classList.add('hidden');
+        }
+
+        // Generate dynamic fallback simulated content when API fails or offline preview occurs
+        function getFallbackTimeline(task, deadlineDate) {
+            const now = new Date();
+            const diffMs = deadlineDate - now;
+            const diffMinutes = Math.floor(diffMs / (1000 * 60));
+            
+            // Build progressive checkpoints relative to remaining duration
+            const milestones = [];
+            let steps = 4;
+            const labels = [
+                "초반부 정보 수집 및 자료 정렬 개시",
+                "핵심 기획 설계 초안 및 실질 골격 생성 완료",
+                "디테일 디벨롭먼트 및 미련 버리기",
+                "오탈자 최종 검수 및 전송/제출 준비"
+            ];
+
+            for (let i = 1; i <= steps; i++) {
+                const fraction = i / steps;
+                const offsetMin = Math.floor(diffMinutes * fraction * 0.9); // keep 10% safety buffer
+                const targetTime = new Date(now.getTime() + offsetMin * 60000);
+                
+                // Format HH:MM
+                const h = String(targetTime.getHours()).padStart(2, '0');
+                const m = String(targetTime.getMinutes()).padStart(2, '0');
+                
+                milestones.push({
+                    time: `${h}:${m}`,
+                    todo: `[${i}단계] ${labels[i-1]} (목표: 지연 없이 신속 해결!)`
+                });
+            }
+
+            return {
+                timetable: milestones,
+                explanation: `⚠️ [경고] API 키 미탐색 또는 오프라인 감지로 인해 "PANIC LINE 실시간 시뮬레이터" 모드로 긴급 로드되었습니다!\n\n현재 당신이 해결하려는 "${task}"의 남은 시간은 약 ${diffMinutes}분입니다. 이를 과학적으로 ${steps}단계 초정밀 마일스톤으로 쪼갰습니다. 이 스케줄러를 무조건 지켜야만 당신의 학점과 업무 실적이 보존됩니다.\n\n즉시 아래 체크리스트를 실행하고 한 줄이라도 타자를 두드리기 시작하십시오.`
+            };
+        }
+
+        // Action: Primary Schedule Dispatcher
+        async function generateUrgentSchedule() {
+            const task = document.getElementById('taskInput').value.trim();
+            const deadlineVal = document.getElementById('deadlineInput').value;
+            const previewApiKey = document.getElementById('previewApiKey').value.trim();
+            
+            if (!task) {
+                alert("🚨 미루고 있는 대상 작업을 명확하게 적어주십시오!");
+                return;
+            }
+            if (!deadlineVal) {
+                alert("🚨 최종 마감 데드라인을 반드시 선택해주셔야 스케줄 배분이 가능합니다!");
+                return;
+            }
+
+            const deadlineDate = new Date(deadlineVal);
+            const now = new Date();
+
+            if (deadlineDate <= now) {
+                alert("🚨 이미 마감 기한이 지난 과거입니다! 타임머신을 타지 않고서는 완료가 불가능합니다.");
+                return;
+            }
+
+            // Show full screen Loader
+            const loader = document.getElementById('fullScreenLoader');
+            loader.classList.remove('hidden');
+
+            const diffHours = ((deadlineDate - now) / (1000 * 60 * 60)).toFixed(2);
+
+            try {
+                let parsedResult;
+
+                if (previewApiKey) {
+                    // Scenario A: Client wants to use their own Gemini API directly inside preview
+                    const prompt = `You are a strict productivity assistant named "PANIC LINE".
+                    User procrastinating: "${task}"
+                    Absolute Deadline: "${deadlineVal}" (which is in exactly ${diffHours} hours from now).
+                    
+                    Respond strictly in JSON format. Do not use markdown backticks.
+                    JSON:
+                    {
+                      "timetable": [
+                        { "time": "HH:MM", "todo": "Brief, extreme urgency-based specific instruction in Korean" }
+                      ],
+                      "explanation": "Panic-inducing but highly motivating speech in Korean."
+                    }`;
+
+                    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${previewApiKey}`;
+                    const response = await fetch(geminiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            contents: [{ parts: [{ text: prompt }] }],
+                            generationConfig: { responseMimeType: "application/json" }
+                        })
+                    });
+                    const resJson = await response.json();
+                    const text = resJson.candidates?.[0]?.content?.parts?.[0]?.text;
+                    parsedResult = JSON.parse(text);
+                } else {
+                    // Scenario B: Real Vercel routing test
+                    const res = await fetch('/api/generate', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ task, deadline: deadlineVal, durationHours: diffHours })
+                    }).catch(err => {
+                        console.warn("Serverless route not active inside standalone preview workspace. Using dynamic local AI simulator fallback.");
+                        return null;
+                    });
+
+                    if (res && res.ok) {
+                        parsedResult = await res.json();
+                    } else {
+                        // Scenario C: Graceful simulation preview mode
+                        parsedResult = getFallbackTimeline(task, deadlineDate);
+                    }
+                }
+
+                // Render Results
+                applyScheduleToDashboard(parsedResult, deadlineDate);
+
+            } catch (err) {
+                console.error(err);
+                alert("스케줄링 도중 에러가 발생하여 로컬 보완 가동을 수행합니다.");
+                const localFallback = getFallbackTimeline(task, deadlineDate);
+                applyScheduleToDashboard(localFallback, deadlineDate);
+            } finally {
+                loader.classList.add('hidden');
+            }
+        }
+
+        // Apply generated schedule inside the view dashboard
+        function applyScheduleToDashboard(data, deadlineDate) {
+            scheduledTimetable = data.timetable || [];
+            
+            // Render text feedback
+            document.getElementById('explanationContainer').innerHTML = `
+                <div class="space-y-3">
+                    <p class="font-extrabold text-red-400 text-sm">🔥 AI 진단 리포트</p>
+                    <p class="text-xs leading-relaxed text-purple-200">${data.explanation.replace(/\n/g, '<br>')}</p>
+                </div>
+            `;
+
+            // Draw timelines
+            const timelineBox = document.getElementById('timelineContainer');
+            timelineBox.innerHTML = '';
+
+            if (scheduledTimetable.length === 0) {
+                timelineBox.innerHTML = `<p class="text-xs text-gray-500 py-4 text-center">마일스톤을 찾지 못했습니다.</p>`;
+                return;
+            }
+
+            scheduledTimetable.forEach((milestone, idx) => {
+                const milestoneDiv = document.createElement('div');
+                milestoneDiv.className = `border border-purple-900/40 bg-purple-950/10 hover:bg-purple-950/20 rounded-xl p-4 transition-all relative flex flex-col sm:flex-row sm:items-center justify-between gap-3`;
+                milestoneDiv.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <div class="flex flex-col items-center justify-center">
+                            <span class="text-xs text-purple-500 font-mono">시작 시각</span>
+                            <span class="text-lg font-mono font-black text-panic-400">${milestone.time}</span>
+                        </div>
+                        <div class="h-8 w-[1px] bg-purple-900 hidden sm:block"></div>
+                        <div>
+                            <span class="text-[10px] uppercase font-mono bg-purple-900/60 text-purple-200 px-1.5 py-0.5 rounded font-bold">${idx + 1}단계 타겟</span>
+                            <p class="text-sm font-semibold text-gray-200 mt-1">${milestone.todo}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button onclick="triggerSpecificAlarm('${milestone.todo}')" class="bg-purple-900 hover:bg-purple-800 text-[10px] text-purple-200 px-2 py-1 rounded border border-purple-700/30 transition-colors">⚡ 테스트 알람</button>
+                    </div>
+                `;
+                timelineBox.appendChild(milestoneDiv);
+            });
+
+            // Launch Live Countdown & Alarm checking loop
+            document.getElementById('panicStatusBar').classList.remove('hidden');
+            startCountdownTimer(deadlineDate);
+            registerTimeAlarms(scheduledTimetable);
+        }
+
+        // Initialize Countdown UI loop
+        function startCountdownTimer(deadlineDate) {
+            if (deadlineTimerInterval) clearInterval(deadlineTimerInterval);
+
+            const initialNow = new Date();
+            const totalDuration = deadlineDate - initialNow;
+
+            function updateTime() {
+                const currentTime = new Date();
+                const remaining = deadlineDate - currentTime;
+
+                if (remaining <= 0) {
+                    document.getElementById('tickingClock').innerText = "00:00:00:00";
+                    document.getElementById('progressBar').style.width = '100%';
+                    document.getElementById('progressBarPercentage').innerText = '100% 마감 도달!';
+                    playUrgentSiren();
+                    clearInterval(deadlineTimerInterval);
+                    return;
+                }
+
+                // Parse components
+                const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+                const milliseconds = Math.floor((remaining % 1000) / 10);
+
+                const dText = String(days).padStart(2, '0');
+                const hText = String(hours).padStart(2, '0');
+                const mText = String(minutes).padStart(2, '0');
+                const sText = String(seconds).padStart(2, '0');
+                const msText = String(milliseconds).padStart(2, '0');
+
+                document.getElementById('tickingClock').innerText = `${dText}:${hText}:${mText}:${sText}.${msText}`;
+
+                // Update percent bar
+                const currentElapsed = currentTime - initialNow;
+                const percent = Math.min(Math.max((currentElapsed / totalDuration) * 100, 0), 100);
+                document.getElementById('progressBar').style.width = `${percent}%`;
+                document.getElementById('progressBarPercentage').innerText = `${percent.toFixed(1)}% 경과`;
+            }
+
+            updateTime();
+            deadlineTimerInterval = setInterval(updateTime, 40);
+        }
+
+        // Scan timetable and trigger alarms inside the active session
+        function registerTimeAlarms(milestones) {
+            // Cancel current set alarms
+            alarmTimeoutTracker.forEach(id => clearInterval(id));
+            alarmTimeoutTracker = [];
+
+            milestones.forEach((m) => {
+                const [targetH, targetM] = m.time.split(':').map(Number);
+                
+                // Interval checking once a minute to trigger exact target time match
+                const checkIntervalId = setInterval(() => {
+                    const localNow = new Date();
+                    const checkH = localNow.getHours();
+                    const checkM = localNow.getMinutes();
+
+                    if (checkH === targetH && checkM === targetM) {
+                        triggerSpecificAlarm(m.todo);
+                    }
+                }, 40000); // Check regularly to prevent performance leaks
+
+                alarmTimeoutTracker.push(checkIntervalId);
+            });
+        }
+
+        function triggerSpecificAlarm(taskDescription) {
+            playUrgentSiren();
+            const alertNotice = document.getElementById('alarmAlertNotice');
+            const alertText = document.getElementById('alertNoticeText');
+            
+            alertText.innerText = taskDescription;
+            alertNotice.classList.remove('hidden');
+
+            // Trigger standard browser push
+            if (Notification.permission === "granted") {
+                new Notification("🚨 PANIC LINE 알람!", {
+                    body: taskDescription,
+                    icon: 'https://placehold.co/128x128/6b21a8/ffffff?text=ALARM'
+                });
+            }
+
+            // Show customized dynamic modal or custom alert inside window
+            alert(`⏰ 기한 완료 강제 수행 알람!!\n-------------------------\n당장 실행해야 할 단계:\n👉 ${taskDescription}\n\n[확인] 버튼을 클릭해 사이렌 경고를 끄세요!`);
+            stopSiren();
+        }
+
+        // Update checklist tracking stats
+        function updateChecklist() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let completedCount = 0;
+            checkboxes.forEach(box => {
+                if (box.checked) completedCount++;
+            });
+            document.getElementById('checklistProgress').innerText = `${completedCount}/${checkboxes.length} 수행`;
+        }
+
+        // Request Browser Notification permissions immediately on load
+        window.addEventListener('load', () => {
+            if ("Notification" in window && Notification.permission !== "granted") {
+                Notification.requestPermission();
+            }
+        });
+
+        // ==========================================
+        // ==========================================
+        async function downloadProjectZip() {
+            const zip = new JSZip();
+
+            // 1. package.json file configuration
+            const packageJson = {
+                "name": "panic-line-scheduler",
+                "version": "1.0.0",
+                "description": "Deadline Completion Panic Alarm App powered by Google Gemini",
+                "main": "api/generate.js",
+                "scripts": {
+                    "dev": "vercel dev",
+                    "deploy": "vercel"
+                },
+                "dependencies": {
+                    "@google/generative-ai": "^0.2.1"
+                }
+            };
+            zip.file("package.json", JSON.stringify(packageJson, null, 2));
+
+            // 2. vercel.json for correct serverless configuration if needed
+            const vercelJson = {
+                "version": 2,
+                "routes": [
+                    { "src": "/api/(.*)", "dest": "/api/$1" },
+                    { "src": "/(.*)", "dest": "/public/$1" }
+                ]
+            };
+            zip.file("vercel.json", JSON.stringify(vercelJson, null, 2));
+
+            // 3. Serverless endpoint api/generate.js
+            const serverlessCode = `/**
+ * Vercel Serverless Function: api/generate.js
+ * Calls Google Gemini API securely using process.env.GEMINI_API_KEY
+ */
+import { GoogleGenAI } from '@google/generative-ai';
+
+export default async function handler(req, res) {
+  // Allow only POST methods
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed. Use POST.' });
+  }
+
+  const { task, deadline, durationHours } = req.body;
+  const apiKey = process.env.GEMINI_API_KEY;
+
+  if (!apiKey) {
+    return res.status(500).json({ 
+      error: 'GEMINI_API_KEY environment variable is missing on Vercel deployment.' 
+    });
+  }
+
+  try {
+    // Initialize standard Google Gen AI
+    const ai = new GoogleGenAI({ apiKey });
+    const model = ai.getGenerativeModel({ model: 'gemini-2.5-flash' });
+
+    const prompt = \`
+      You are an intense, urgent productivity coach named "PANIC LINE". 
+      The user is procrastinating on this task: "\${task}".
+      The absolute deadline is: "\${deadline}" (approximately \${durationHours} hours left).
+
+      Your goal is to split the remaining time into exactly 4 to 6 critical action milestones.
+      Produce a timeline that dictates exactly what they must start doing right now to finish safely.
+      Use a highly motivating, slightly panicked, and urgent tone (written in Korean). 
+
+      You MUST respond with a strictly formatted JSON object and nothing else. Do not wrap inside markdown code blocks.
+      Expected JSON template:
+      {
+        "timetable": [
+          { "time": "HH:MM", "todo": "Short milestone description" }
+        ],
+        "explanation": "High-tension motivational summary and distraction control reminders"
+      }
+    \`;
+
+    const result = await model.generateContent(prompt);
+    const responseText = result.response.text();
+    
+    // Extract JSON in case formatting has extra wrapper blocks
+    const jsonMatch = responseText.match(/\\{[\\s\\S]*\\}/);
+    if (!jsonMatch) {
+      throw new Error("Failed to parse valid JSON from Gemini API response");
+    }
+
+    const payload = JSON.parse(jsonMatch[0]);
+    return res.status(200).json(payload);
+
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+}`;
+            zip.folder("api").file("generate.js", serverlessCode);
+
+            // 4. client side public/index.html
+            // Create a clean public structure containing our primary layout
+            const clientHtml = document.documentElement.outerHTML;
+            zip.folder("public").file("index.html", clientHtml);
+
+            // 5. Readme file instructions
+            const readmeText = `# PANIC LINE - 기한 임박 일정 강제 완료 알람기
+
+본 어플리케이션은 **Vercel** 에 즉시 배포할 수 있도록 구성된 초긴급 타임라인 매니저입니다.
+
+## 🚀 배포 방법
+
+1. 다운로드 받은 ZIP 파일의 압축을 해제합니다.
+2. Vercel CLI 또는 Vercel GitHub 연동 기능을 사용하여 배포를 개시하십시오.
+3. 배포 프로젝트 설정 (Project Settings) -> **Environment Variables** 메뉴로 진입하여 다음 키를 주입합니다:
+   - \`GEMINI_API_KEY\`: [Google AI Studio](https://aistudio.google.com/)에서 취득한 API Key 값
+
+## 🛠️ 개발 가이드 및 구성 정보
+- **프론트엔드**: \`public/index.html\` (Tailwind CSS, 브라우저 Web Audio API 기반 오디오 합성 사이렌 포함)
+- **백엔드 (API 엔드포인트)**: \`api/generate.js\` (Gemini 2.5 Flash 모델 활용한 타임라인 구성 처리)`;
+            zip.file("README.md", readmeText);
+
+            // Generate ZIP and trigger standard download
+            const content = await zip.generateAsync({ type: "blob" });
+            const downloadUrl = URL.createObjectURL(content);
+            const dummyAnchor = document.createElement("a");
+            dummyAnchor.href = downloadUrl;
+            dummyAnchor.download = "panic_line_project_files.zip";
+            document.body.appendChild(dummyAnchor);
+            dummyAnchor.click();
+            document.body.removeChild(dummyAnchor);
+        }
+    </script>
+
+</body></html>
